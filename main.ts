@@ -16,8 +16,8 @@ async function getSotd() {
     return menuCatProdTitles[dayOfWeek].textContent;
 }
 
-const server = Deno.listen({port: 80});
-console.log("HTTP webserver running on port 80");
+const server = Deno.listen({port: 8080});
+console.log("HTTP webserver running on port 8080");
 
 for await (const conn of server) {
     serveHttp(conn);
