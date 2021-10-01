@@ -11,7 +11,7 @@ async function getSotd() {
     
     const menuCatProdTitles = doc.querySelectorAll(".menu-cat-prod-title");
     
-    const dayOfWeek = (new Date().getDay() - 1) % 7;
+    const dayOfWeek = (new Date().getDay() + 6) % 7;
 
     return menuCatProdTitles[dayOfWeek].textContent;
 }
